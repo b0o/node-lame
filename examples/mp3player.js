@@ -1,6 +1,7 @@
-var fs = require('fs');
-var lame = require('../');
-var Speaker = require('speaker');
+import fs from 'fs';
+import Speaker from 'speaker';
+
+import lame from '../index.js';
 
 fs.createReadStream(process.argv[2])
   .pipe(new lame.Decoder)

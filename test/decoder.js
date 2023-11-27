@@ -1,8 +1,13 @@
+import fs from 'fs';
+import path from 'path';
+import assert from 'assert';
+import { fileURLToPath } from 'url';
 
-var fs = require('fs');
-var path = require('path');
-var lame = require('../');
-var assert = require('assert');
+import lame from '../index.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 var fixtures = path.resolve(__dirname, 'fixtures');
 var outputName = path.resolve(__dirname, 'output.wav');
 

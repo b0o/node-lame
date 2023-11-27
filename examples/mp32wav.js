@@ -1,12 +1,13 @@
-
 /**
  * An example using node-lame and node-wav to decode an MP3 file and save it into
  * a WAVE file.
  */
 
-var fs = require('fs');
-var lame = require('../');
-var wav = require('wav');
+import fs from 'fs';
+import wav from 'wav';
+
+import lame from '../index.js';
+
 var filename = process.argv[2];
 
 if (process.stdin.isTTY && !filename) {

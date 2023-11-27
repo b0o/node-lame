@@ -1,12 +1,13 @@
-
 /**
  * Here's a clone of the popular "wav2mp3" program, but using node-lame and
  * node-wav.
  */
 
-var fs = require('fs');
-var lame = require('../');
-var wav = require('wav');
+import fs from 'fs';
+import wav from 'wav';
+
+import lame from '../index.js';
+
 var filename = process.argv[2];
 
 if (process.stdin.isTTY && !filename) {
