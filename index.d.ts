@@ -16,19 +16,23 @@ declare module 'lame' {
 
     /**
      * The `Decoder` accepts an MP3 file and outputs raw PCM data.
-     * 
+     *
      * @param opts Configurations.
      * @returns A writable stream.
      */
-    export function Decoder(opts?: DecoderOptions): WriteStream;
+    export class Decoder extends WriteStream {
+        constructor(opts?: DecoderOptions);
+    }
 
     /**
      * The `Encoder` accepts raw PCM data and outputs an MP3 file.
-     * 
+     *
      * @param opts Configurations.
      * @returns A writable stream.
      */
-    export function Encoder(opts?: EncoderOptions): WriteStream;
+    export class Encoder extends WriteStream {
+        constructor(opts?: EncoderOptions);
+    }
 
     /*
      * Channel Modes
