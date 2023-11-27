@@ -1,5 +1,5 @@
 {
-  "name": "@flat/lame",
+  "name": "lame",
   "description": "NodeJS native bindings to libmp3lame & libmpg123.",
   "keywords": [
     "lame",
